@@ -1,0 +1,56 @@
+intents:
+- greet
+- thank
+- bye
+- ask_func_list
+- ask_name
+- out_of_scope
+- ask_weather
+- ask_weather_location
+- ask_temperature
+- ask_location
+entities:
+- location
+slots:
+  location:
+    type: text
+  number:
+    type: unfeaturized
+  time:
+    type: unfeaturized
+templates:
+  utter_greet:
+  - text: Xin chào mình là Nancy Bot, mình có thể giúp gì cho bạn!!
+    edited_since_last_training: true
+  utter_bye:
+  - text: Gặp lại bạn sau nhé !! <3
+    edited_since_last_training: true
+  - text: 'Tạm biệt bạn nha !!<3  '
+    edited_since_last_training: true
+  utter_thank:
+  - text: Cảm ơn bạn, quá khen ah!
+  - text: Dạ không có gì, đó là trách nhiệm của tớ mà!
+  utter_func_list:
+  - text: Mình có thể trả lời những câu hỏi về thời tiết cũng như một số thông tin
+      nhỏ về các thành phố trên thế giới nhé <3
+  utter_ask_name:
+  - text: Nancy xinh đẹp, dễ thương nhé!!
+  - text: Mình tên là gì ứ nói ấy
+  utter_unclear:
+  - text: Mình chả hiểu ý bạn như nào cả
+  utter_default:
+  - text: Xin lỗi, mình không hiểu ý bạn nói :<
+  utter_ask_weather:
+  - text: Bạn muốn xem thời tiết ở đâu ??
+  - text: Bạn muốn hỏi thời tiết ở đâu nhỉ ??
+actions:
+- action_weather_location
+- utter_ducking
+- utter_greet
+- utter_bye
+- utter_unclear
+- utter_func_list
+- utter_thank
+- utter_ask_name
+- utter_default
+- utter_ask_weather
